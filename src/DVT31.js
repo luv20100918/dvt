@@ -68,6 +68,9 @@ export default function DVT31({ no, type, d1, d2 }) {
                     </div>
                 </>
             }
+            {n1 > 0 &&
+            <>
+            {b > 0 && <>
             <div className='cal-line'>
                 <div className='box'></div>
                 <div className='temp'></div>
@@ -82,7 +85,11 @@ export default function DVT31({ no, type, d1, d2 }) {
                 <div className='box top-line'>{type == 'question' && '\u00A0'}{type == 'answer' && (n2Arr.length == 2 && n2Arr[0])}</div>
                 <div className='box top-line'>{type == 'question' && '\u00A0'}{type == 'answer' && (n2Arr.length == 2 && n2Arr[1])}{type == 'answer' && (n2Arr.length == 1 && n2Arr[0])}</div>
             </div>
-            <div className='cal-line'>
+            </>
+            }
+            {c > 0 &&
+            <>
+                        <div className='cal-line'>
                 <div className='box'></div>
                 <div className='temp'></div>
                 <div className='box'></div>
@@ -96,6 +103,11 @@ export default function DVT31({ no, type, d1, d2 }) {
                 <div className='box top-line'></div>
                 <div className='box top-line'>{type == 'answer' && n3}{type == 'question' && '\u00A0'}</div>
             </div>
+            </>
+            }
+
+            </>
+            }
         </div>
     )
 }
